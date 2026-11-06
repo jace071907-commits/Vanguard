@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en" data-mode="light" data-accent="blue">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VANGUARD | Account Setup</title>
+  <link rel="icon" type="image/png" href="assets/img/vlogo.png" />
+  <script src="js/theme-boot.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="auth-page guarded">
+  <div class="splash"><div class="spinner lg"></div><p>Verifying session…</p></div>
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="auth-top"><div></div><div data-theme-controls></div></header>
+
+  <main class="auth-main">
+    <img data-logo class="auth-logo" src="assets/img/vb.png" alt="VANGUARD" />
+    <p class="auth-tagline">First-Time Account Setup</p>
+
+    <section class="card auth-card">
+      <ol class="stepper">
+        <li data-step="1" class="active"><span class="step-dot">1</span><span>Create Password</span></li>
+        <li class="step-line"></li>
+        <li data-step="2"><span class="step-dot">2</span><span>Register Email</span></li>
+      </ol>
+
+      <p class="muted small setup-greeting">Welcome, <strong id="userName"></strong></p>
+
+      <form id="passwordForm" class="auth-form" novalidate>
+        <div>
+          <h2>Create your new password</h2>
+          <p class="muted small">You signed in with a temporary password. Choose a new one to secure your account.</p>
+        </div>
+        <label class="field">
+          <span>New Password</span>
+          <div class="input-wrap">
+            <span class="input-icon">✱</span>
+            <input id="newPw" type="password" autocomplete="new-password" required />
+            <button type="button" class="input-action" data-toggle-pw="newPw,confirmPw">Show</button>
+          </div>
+        </label>
+        <label class="field">
+          <span>Confirm Password</span>
+          <div class="input-wrap">
+            <span class="input-icon">✱</span>
+            <input id="confirmPw" type="password" autocomplete="new-password" required />
+          </div>
+        </label>
+        <ul class="pw-rules" id="pwRules"></ul>
+        <div class="inline-alert" id="pwError" hidden></div>
+        <button class="btn btn-primary btn-block" id="pwBtn" type="submit">Save Password &amp; Continue</button>
+      </form>
+
+      <form id="emailForm" class="auth-form" novalidate hidden>
+        <div>
+          <h2>Register your company email</h2>
+          <p class="muted small">Use your Carelon email in the format <strong>Firstname.Lastname@carelon.com</strong></p>
+        </div>
+        <label class="field">
+          <span>Company Email Address</span>
+          <div class="input-wrap">
+            <span class="input-icon">✉</span>
+            <input id="email" type="email" autocomplete="email" placeholder="john.ariola@carelon.com" required />
+          </div>
+        </label>
+        <p class="muted small">Examples: john.ariola@carelon.com · juan.dela.cruz@carelon.com</p>
+        <div class="inline-alert" id="emailError" hidden></div>
+        <button class="btn btn-primary btn-block" id="emailBtn" type="submit">Complete Account Setup</button>
+      </form>
+
+      <div id="doneView" class="done-view" hidden>
+        <div class="done-icon">✓</div>
+        <h2>Account Successfully Created</h2>
+        <p class="muted small">Redirecting you to your dashboard…</p>
+      </div>
+
+      <button type="button" class="btn btn-ghost btn-block" id="cancelBtn">Cancel and sign out</button>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span>Powered by</span><img src="assets/img/ignite.png" alt="Ignite" /><span class="footer-name">Jace</span>
+  </footer>
+
+  <script type="module" src="js/pages/setup.js"></script>
+</body>
+</html>

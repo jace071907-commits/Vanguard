@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en" data-mode="light" data-accent="blue">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VANGUARD | Sign In</title>
+  <link rel="icon" type="image/png" href="assets/img/vlogo.png" />
+  <script src="js/theme-boot.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="auth-page">
+  <div class="bg-orbs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="auth-top">
+    <div class="db-status" id="dbStatus"><span class="dot"></span><span class="txt">Connecting to database…</span></div>
+    <div data-theme-controls></div>
+  </header>
+
+  <main class="auth-main">
+    <img data-logo class="auth-logo" src="assets/img/vb.png" alt="VANGUARD" />
+    <p class="auth-tagline">Corrective Action Management System</p>
+
+    <section class="card auth-card">
+      <div class="seg-tabs" role="tablist" data-active="associate">
+        <span class="seg-indicator"></span>
+        <button type="button" role="tab" data-portal="associate" aria-selected="true" class="active">Associate Login</button>
+        <button type="button" role="tab" data-portal="manager" aria-selected="false">Manager Login</button>
+      </div>
+
+      <form id="loginForm" class="auth-form" novalidate>
+        <div>
+          <h2 id="portalTitle">Associate Login</h2>
+          <p class="muted small" id="portalHint">For Associates and SMEs.</p>
+        </div>
+
+        <label class="field">
+          <span>Username (Domain ID)</span>
+          <div class="input-wrap">
+            <span class="input-icon">@</span>
+            <input id="domain" name="domain" autocomplete="username" placeholder="e.g. AA12345" autocapitalize="characters" required />
+          </div>
+        </label>
+
+        <label class="field">
+          <span>Password</span>
+          <div class="input-wrap">
+            <span class="input-icon">✱</span>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required />
+            <button type="button" class="input-action" data-toggle-pw="password">Show</button>
+          </div>
+        </label>
+
+        <div class="inline-alert" id="loginError" hidden></div>
+
+        <button class="btn btn-primary btn-block" id="loginBtn" type="submit">Sign In</button>
+        <p class="muted small center">First time signing in? Use the temporary password provided by your administrator.</p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <span>Powered by</span><img src="assets/img/ignite.png" alt="Ignite" /><span class="footer-name">Jace</span>
+  </footer>
+
+  <script type="module" src="js/pages/login.js"></script>
+</body>
+</html>

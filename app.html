@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en" data-mode="light" data-accent="blue">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VANGUARD</title>
+  <link rel="icon" type="image/png" href="assets/img/vlogo.png" />
+  <script src="js/theme-boot.js"></script>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body class="guarded">
+  <div class="splash"><div class="spinner lg"></div><p>Verifying session…</p></div>
+
+  <div class="app-shell" id="shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-brand"><img data-logo class="sidebar-logo" src="assets/img/vb.png" alt="VANGUARD" /></div>
+      <nav class="sidebar-nav" id="nav" aria-label="Main navigation"></nav>
+      <div class="sidebar-user">
+        <div class="avatar" id="userAvatar"></div>
+        <div class="user-meta">
+          <strong id="userName"></strong>
+          <span id="userRole"></span>
+        </div>
+      </div>
+      <button type="button" class="btn btn-ghost btn-block" id="logoutBtn">⎋ Sign out</button>
+    </aside>
+    <div class="scrim" id="scrim"></div>
+
+    <div class="main-col">
+      <header class="topbar">
+        <button type="button" class="hamburger" id="menuBtn" aria-label="Toggle navigation"><span></span><span></span><span></span></button>
+        <nav class="module-tabs" id="moduleTabs" role="tablist" aria-label="Modules"></nav>
+        <div class="topbar-actions">
+          <div id="bell"></div>
+          <div data-theme-controls></div>
+        </div>
+      </header>
+      <div class="page-head">
+        <h1 id="pageTitle"></h1>
+        <p id="pageCrumb" class="muted small"></p>
+      </div>
+      <main class="content" id="view" tabindex="-1"></main>
+      <footer class="app-footer">
+        <span>Powered by</span><img src="assets/img/ignite.png" alt="Ignite" /><span class="footer-name">Jace</span>
+      </footer>
+    </div>
+  </div>
+
+  <script type="module" src="js/pages/app.js"></script>
+</body>
+</html>
