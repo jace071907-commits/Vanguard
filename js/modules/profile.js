@@ -34,7 +34,7 @@ export default {
         </div>
       </section>
       <section class="card panel">
-        <div class="panel-head"><h3>Employee Information</h3>
+        <div class="panel-head"><h3>Employee Information</h3></div>
         <div class="info-grid">
           ${FIELDS.map(([label, key]) => `
             <div class="info-item">
